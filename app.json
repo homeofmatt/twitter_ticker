@@ -1,0 +1,6 @@
+{
+  "name": "Twitter Ticker",
+  "description": "A real-time twitter ticker app tracking #chapmanu",
+  "repository": "https://github.com/homeofmatt/twitter_ticker.git",
+  "keywords": ["node", "express", "static"]
+}

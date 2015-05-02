@@ -1,0 +1,19 @@
+{
+  "name": "twitter_ticker",
+  "version": "1.0.0",
+  "description": "A real-time twitter ticker app tracking #chapmanu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/homeofmatt/twitter_ticker.git"
+  },
+  "author": "Matt Congel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homeofmatt/twitter_ticker/issues"
+  },
+  "homepage": "https://github.com/homeofmatt/twitter_ticker"
+}
