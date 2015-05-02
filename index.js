@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
+var request = require('request');
 
 function getJSON(callback) {
-	var request = require("request");
-
 	var url = "https://social.chapman.edu/posts.json?" + "service=twitter" + "&keyword=chapmanu";
 
 	request({
