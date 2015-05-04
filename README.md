@@ -1,6 +1,6 @@
 Twitter Ticker app for #chapmanu. Enjoy!
 
-To run locally:
+# To run locally:
 1. Download and install node.js
 2. Clone this repository
 3. Navigate to folder through your shell
