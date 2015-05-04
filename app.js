@@ -1,6 +1,3 @@
-//var routes = require('./routes');
-//var user = require('./routes/user');
-
 // dependencies
 var http = require('http');
 var path = require('path');
@@ -35,7 +32,6 @@ app.get('/loading', function(req, res){
 
 	request({url: url, json: true}, function (error, response, body){
 		if(!error && response.statusCode === 200){
-			//console.log(body);
 			res.send(body);
 		}else{
 			console.log(error);

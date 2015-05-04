@@ -16,14 +16,12 @@ h2.tut{
     text-shadow:2px 1px 6px #333;
 }
 
-#twitter-ticker{
-    /* Styling the ticker */
+#tweet-container{
     float:left;
     min-height:250px;
     width:750px;
     background:url(../images/transparent.png) repeat-x scroll center top transparent;
-    color:#666666;
-    display:none;
+    color:#666666
 
     /* Rounded corners */
     -moz-border-radius:10px 10px 6px 6px;
@@ -32,12 +30,6 @@ h2.tut{
     border-radius:6px;
 
     text-align:left;
-}
-
-#tweet-container{
-    /* This is where the tweets are inserted */
-    min-height:250px;
-    width:auto;
     overflow:hidden;
 }
 
@@ -64,6 +56,7 @@ h2.tut{
     font-size:10px;
     color:#AAAAAA;
     white-space:nowrap;
+    padding-left:10px;
 }
 
 .tweet .avatar img{

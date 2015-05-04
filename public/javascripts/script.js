@@ -1,30 +1,32 @@
 $(function(){
 
-    $('#twitter-ticker').slideDown('slow');
-
     $.get('/loading', function(response){
-    	var container = $('#tweet-container');
 
-        // Empty the container
-        $('#tweet-container').html('');
+        var i = 0;
+        var postTweet = setInterval(function() {
+        	$('#tweet-container').html('');
 
-        $.each(response, function(){
-
-        	var pic = (this.author.avatar.slice(0, 4) === "http")?this.author.avatar:"../images/window.jpg"
+        	var obj = response[i];
+        	var pic = (obj.author.avatar.slice(0, 4) === "http")?obj.author.avatar:"../images/window.jpg"
 
             var str = '	<div class="tweet">\
-                        <div class="avatar"><a href="http://twitter.com/'+this.author.user_name+'" target="_blank"><img src="'+pic+'" alt="pic" /></a></div>\
-                        <div class="user"><a href="http://twitter.com/'+this.author.user_name+'" target="_blank">'+this.author.user_name+'</a></div>\
-                        <div class="time">'+relativeTime(this.timestamp)+'</div>\
-                        <div class="txt">'+formatTwitString(this.text)+'</div>\
+                        <div class="avatar"><a href="http://twitter.com/'+obj.author.user_name+'" target="_blank"><img src="'+pic+'" alt="pic" /></a></div>\
+                        <div class="user"><a href="http://twitter.com/'+obj.author.user_name+'" target="_blank">'+obj.author.user_name+'</a></div>\
+                        <div class="time">'+relativeTime(obj.timestamp)+'</div>\
+                        <div class="txt">'+formatTwitString(obj.text)+'</div>\
                         </div>';
-            $('#tweet-container').append(str);
-        });
 
+            $('#tweet-container').html(str).fadeIn(1000).delay(2750).fadeOut(1000, function(){
+            	i += 1;
+	            if(i >= response.length){
+	            	location.reload();
+	            	clearInterval(postTweet);
+	            }
+            });
+        }, 5000);
     });
 
     // Helper functions
-
     function formatTwitString(str){
         str=' '+str;
         str = str.replace(/((ftp|https?):\/\/([-\w\.]+)+(:\d+)?(\/([\w/_\.]*(\?\S+)?)?)?)/gm,'<a href="$1" target="_blank">$1</a>');
