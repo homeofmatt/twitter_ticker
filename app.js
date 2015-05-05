@@ -18,7 +18,7 @@ server.listen(port, function(){
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-You will need to create your own Twitter app to get your key/token information
+// You will need to create your own Twitter app to get your key/token information
 var Twitter = require('node-tweet-stream')
 	, t = new Twitter({
 		consumer_key: process.env.CONSUMER_KEY,
