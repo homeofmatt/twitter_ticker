@@ -7,3 +7,5 @@ Twitter Ticker app for #chapmanu. Enjoy!
 4. Run 'npm install'
 5. Run 'node app.js'
 6. Navigate to 'http://localhost:5000' to view app
+
+!! You must create your own Twitter app and enter your token information for the live stream. Visit https://apps.twitter.com/
