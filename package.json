@@ -17,7 +17,9 @@
     "body-parser": "1.8",
     "errorhandler": "*",
     "http": "*",
-    "path": "*"
+    "path": "*",
+    "socket.io": "*",
+    "node-tweet-stream": "*"
   },
   "engines": {
     "node": "0.12.2"

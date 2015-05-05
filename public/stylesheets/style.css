@@ -4,24 +4,14 @@ body,h1,h2,h3,p,quote,small,form,input,ul,li,ol,label{
     padding:0px;
 }
 
-h2.tut{
-    /* This is the "MY TWEETS" title */
-    color:white;
-    font-family:"Myriad Pro", Arial, Helvetica, sans-serif;
-    font-size:16px;
-    padding:12px 0 0 58px;
-    text-transform:uppercase;
- 
-    /* The CSS3 text-shadow property */
-    text-shadow:2px 1px 6px #333;
-}
-
 #tweet-container{
     float:left;
-    min-height:250px;
-    width:750px;
-    background:url(../images/transparent.png) repeat-x scroll center top transparent;
-    color:#666666
+    height:500px;
+    width:500px;
+    /*background: url(../images/transparent.png) repeat-x scroll center top transparent;*/
+    background-color: #FF5050;
+    color:#666666;
+    display:none;
 
     /* Rounded corners */
     -moz-border-radius:10px 10px 6px 6px;
